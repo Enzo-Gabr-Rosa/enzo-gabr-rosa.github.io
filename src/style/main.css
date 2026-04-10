@@ -1,0 +1,39 @@
+:root {
+  --black-ink: #131b23;
+  --platinum: #e9f1f7;
+  --dust-gray: #d9d9d9;
+  --turquoise: #44dad0;
+  --blue-spruce: #136f63;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 9%;
+  background-color: var(--black-ink);
+  gap: 1rem; /* espaço entre h1 e h3 */
+  padding: 0 1rem;
+}
+
+.navbar h1{
+  color: var(--platinum);
+}
+
+.navbar h3 {
+  color: var(--platinum);
+}
+
+h1 {
+  color: var(--platinum);
+  font-size: 64px;
+}
+
+h3{
+  font-size: 24px;
+}
+
