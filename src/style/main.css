@@ -79,8 +79,29 @@ h1 {
   color: var(--platinum);
   font-size: 48px;
 }
+/* Fim da nav bar */
+
 
 h3 {
   transition: 0.5s;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 52px;
+}
+.introduction {
+  color: var(--black-ink);
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Mude de column para row */
+  gap: 80px; /* Adicione espaçamento entre imagem e texto */
+}
+
+.list {
+  margin-top: 20px;
+  margin-left: 10%;
   font-size: 24px;
 }
