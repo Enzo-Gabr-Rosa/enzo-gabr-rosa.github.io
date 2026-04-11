@@ -53,6 +53,7 @@ body {
   background-color: var(--blue-spruce);
 }
 
+
 .navbar button:hover{
   background-color: var(--turquoise);
   transition: 0.5s;
@@ -98,6 +99,44 @@ h2 {
   align-items: center;
   flex-direction: row; /* Mude de column para row */
   gap: 80px; /* Adicione espaçamento entre imagem e texto */
+}
+.introduction u{
+  color: var(--blue-spruce);
+  transition: 0.5s;
+}
+
+.introduction u:hover{
+  transition: 0.5s;
+  color: var(--turquoise);
+}
+.pink{
+  color: var(--black-ink);
+  transition: 0.5s;
+}
+
+.pink:hover{
+  color: rgb(233, 83, 213);
+}
+
+.introduction img{
+  border-top: 8px solid var(--blue-spruce);
+  border-bottom: 8px solid var(--blue-spruce);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: 1s;
+  transform: scale(1); /* Aumenta a imagem em 5% */
+}
+
+.introduction img:hover{
+  transition: 1s;
+  border-top: none;
+  border-bottom: none;
+  border-left: 8px solid var(--turquoise);
+  border-right: 8px solid var(--turquoise);
+  transform: scale(1.05); /* Aumenta a imagem em 5% */
+  box-shadow: 0 0 100px var(--turquoise); /* Adiciona uma sombra para destacar a imagem */
 }
 
 .list {
