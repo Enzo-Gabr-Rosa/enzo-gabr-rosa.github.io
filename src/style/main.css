@@ -6,13 +6,14 @@
   --blue-spruce: #136f63;
 }
 
+/* ===== FONTS ===== */
 @font-face {
   font-family: "Jomolhari";
   src: url(../fonts/Jomolhari-Regular.ttf);
 }
 
+/* ===== RESET ===== */
 * {
-  /*reseta os espaçamentos*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,19 +24,32 @@ body {
   background-color: var(--alabaster-grey);
 }
 
+/* ===== TYPOGRAPHY ===== */
+h1 {
+  color: var(--platinum);
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 52px;
+}
+
+h3 {
+  transition: 0.5s;
+  font-size: 24px;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
-  /* espaçamento dos itens, cor de fundo e padding  */
   width: 100%;
   padding: 20px 40px;
   background-color: var(--black-ink);
-
   display: flex;
-  justify-content: space-between; /* joga um pra cada lado */
-  align-items: center; /* centraliza vertical */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar h1 {
-  /* cor do texto do título da navbar */
   color: var(--platinum);
 }
 
@@ -45,22 +59,22 @@ body {
 }
 
 .navbar button {
-  transition: 0.5s;
   width: 128px;
   height: 48px;
-  border: 0px;
+  border: none;
   border-radius: 15px;
   background-color: var(--blue-spruce);
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .navbar button:hover {
   background-color: var(--turquoise);
-  transition: 0.5s;
 }
 
 .options {
   display: flex;
-  gap: 30px; /* espaço entre os itens */
+  gap: 30px;
 }
 
 .options a {
@@ -71,42 +85,36 @@ body {
 }
 
 .options h3:hover {
-  transition: 0.5s;
   opacity: 1;
 }
 
-h1 {
+.menu-toggle {
+  display: none;
+  font-size: 28px;
   color: var(--platinum);
-  font-size: 48px;
-}
-/* Fim da nav bar */
-
-h3 {
-  transition: 0.5s;
-  font-size: 24px;
+  cursor: pointer;
 }
 
-h2 {
-  font-size: 52px;
-}
+/* ===== INTRODUCTION ===== */
 .introduction {
   color: var(--black-ink);
   margin: 8% 0 12% 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; /* Mude de column para row */
-  gap: 80px; /* Adicione espaçamento entre imagem e texto */
+  flex-direction: row;
+  gap: 80px;
 }
+
 .introduction u {
   color: var(--blue-spruce);
   transition: 0.5s;
 }
 
 .introduction u:hover {
-  transition: 0.5s;
   color: var(--turquoise);
 }
+
 .pink {
   color: var(--black-ink);
   transition: 0.5s;
@@ -117,26 +125,25 @@ h2 {
 }
 
 .introduction img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
   border-top: 8px solid var(--blue-spruce);
   border-bottom: 8px solid var(--blue-spruce);
   border-left: 8px solid var(--turquoise);
   border-right: 8px solid var(--turquoise);
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
   transition: 1s;
-  transform: scale(1); /* Aumenta a imagem em 5% */
+  transform: scale(1);
 }
 
 .introduction img:hover {
-  transition: 1s;
   border-top: 8px solid var(--turquoise);
   border-bottom: 8px solid var(--turquoise);
   border-left: 8px solid var(--blue-spruce);
   border-right: 8px solid var(--blue-spruce);
-  transform: scale(1.25); /* Aumenta a imagem em 5% */
-  box-shadow: 0 0 100px var(--turquoise); /* Adiciona uma sombra para destacar a imagem */
+  transform: scale(1.25);
+  box-shadow: 0 0 100px var(--turquoise);
 }
 
 .list {
@@ -144,21 +151,11 @@ h2 {
   margin-left: 10%;
   font-size: 24px;
 }
-/* Fim da introdução */
 
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: var(--platinum);
-  cursor: pointer;
-}
-
-/* menu toggle */
-
+/* ===== DETAILS SECTION ===== */
 .details {
   background-color: var(--black-ink);
   height: 567px;
-
   position: relative;
   overflow: hidden;
 }
@@ -170,23 +167,23 @@ section {
   overflow: hidden;
 }
 
-.wave {
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 200%; /* importante pra animar suave */
-  height: 100px;
-
-  background: url("../imgs/wave.png");
-  background-size: 1000px 100px;
-}
-
+/* ===== WAVES ===== */
 .wave-container {
   position: relative;
   width: 100%;
   height: 100px;
   overflow: hidden;
-  background-color: var(--alabaster-grey); /* cor de cima */
+  background-color: var(--alabaster-grey);
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100px;
+  background: url("../imgs/wave.png");
+  background-size: 1000px 100px;
 }
 
 .wave1 {
@@ -210,6 +207,7 @@ section {
 .bottom-wave .wave2 {
   animation: animate 12s linear infinite;
 }
+
 @keyframes animate {
   0% {
     background-position-x: 0;
@@ -219,46 +217,59 @@ section {
   }
 }
 
+/* ===== DETAILS SECTION ===== */
+
+.details {
+  padding: 0 8% 0 8%;
+  color: var(--platinum);
+  display: flex;
+  gap: 250px;
+}
+
+.details h2 {
+  font-size: 36px;
+  text-align: justify;
+  margin-top: 50px;
+}
+
+.details p {
+  font-size: 24px;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 4% 0 0 0;
+}
+.logos img:hover {
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  .introduction img {
-    margin-top: 50px;
-    width: 250px;
-    height: 250px;
-    border-top: 8px solid var(--blue-spruce);
-    border-bottom: 8px solid var(--blue-spruce);
-    border-left: 8px solid var(--turquoise);
-    border-right: 8px solid var(--turquoise);
-    transform: scale(1.05); /* Aumenta a imagem em 5% */
-    box-shadow: 0 0 100px var(--turquoise); /* Adiciona uma sombra para destacar a imagem */
+  .navbar {
+    z-index: 900;
+    position: relative;
+  }
+
+  .navbar h1 {
+    font-size: 24px;
   }
 
   .navbar h3 {
-    color: var(--platinum);
     opacity: 0.7;
   }
 
-  .introduction {
-    flex-direction: column; /* Muda para coluna em telas menores */
-    gap: 20px; /* Reduz o espaçamento entre imagem e texto */
-    text-align: center;
-  }
-
-  .introduction h2 {
-    font-size: 32px;
-  }
-
-  .introduction h3 {
-    font-size: 18px;
-  }
-
-  .introduction li {
-    padding: 0px 20px;
-    text-align: justify;
-    font-size: 20px;
+  .navbar button {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .options {
@@ -279,17 +290,53 @@ section {
     margin-bottom: auto;
   }
 
-  .navbar h1 {
-    font-size: 24px;
+  .introduction {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 
-  .navbar button {
-    margin-left: auto;
-    margin-right: auto;
+  .introduction h2 {
+    font-size: 32px;
   }
 
-  .navbar {
-    z-index: 900;
-    position: relative;
+  .introduction h3 {
+    font-size: 18px;
   }
+
+  .introduction li {
+    padding: 0 20px;
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  .introduction img {
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+    transform: scale(1.05);
+    
+  }
+
+  .details h2{
+    font-size: 32px;
+  }
+  .details p{
+    font-size: 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+  }
+  .logos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 0 40px 0;
+  }
+
 }
