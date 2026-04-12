@@ -20,7 +20,7 @@
 }
 
 body {
-  background-color: var(--platinum);
+  background-color: var(--alabaster-grey);
 }
 
 .navbar {
@@ -91,7 +91,7 @@ h2 {
 }
 .introduction {
   color: var(--black-ink);
-  margin-top: 8%;
+  margin: 8% 0 12% 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +119,8 @@ h2 {
 .introduction img {
   border-top: 8px solid var(--blue-spruce);
   border-bottom: 8px solid var(--blue-spruce);
+  border-left: 8px solid var(--turquoise);
+  border-right: 8px solid var(--turquoise);
   border-radius: 50%;
   width: 300px;
   height: 300px;
@@ -129,11 +131,11 @@ h2 {
 
 .introduction img:hover {
   transition: 1s;
-  border-top: none;
-  border-bottom: none;
-  border-left: 8px solid var(--turquoise);
-  border-right: 8px solid var(--turquoise);
-  transform: scale(1.05); /* Aumenta a imagem em 5% */
+  border-top: 8px solid var(--turquoise);
+  border-bottom: 8px solid var(--turquoise);
+  border-left: 8px solid var(--blue-spruce);
+  border-right: 8px solid var(--blue-spruce);
+  transform: scale(1.25); /* Aumenta a imagem em 5% */
   box-shadow: 0 0 100px var(--turquoise); /* Adiciona uma sombra para destacar a imagem */
 }
 
@@ -151,6 +153,72 @@ h2 {
   cursor: pointer;
 }
 
+/* menu toggle */
+
+.details {
+  background-color: var(--black-ink);
+  height: 567px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 200%; /* importante pra animar suave */
+  height: 100px;
+
+  background: url("../imgs/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: var(--alabaster-grey); /* cor de cima */
+}
+
+.wave1 {
+  animation: animate 8s linear infinite;
+  opacity: 1;
+}
+
+.wave2 {
+  animation: animate 12s linear infinite reverse;
+  opacity: 0.5;
+}
+
+.bottom-wave {
+  transform: rotate(180deg);
+}
+
+.bottom-wave .wave1 {
+  animation: animate 8s linear infinite reverse;
+}
+
+.bottom-wave .wave2 {
+  animation: animate 12s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -166,6 +234,11 @@ h2 {
     border-right: 8px solid var(--turquoise);
     transform: scale(1.05); /* Aumenta a imagem em 5% */
     box-shadow: 0 0 100px var(--turquoise); /* Adiciona uma sombra para destacar a imagem */
+  }
+
+  .navbar h3 {
+    color: var(--platinum);
+    opacity: 0.7;
   }
 
   .introduction {
@@ -198,7 +271,7 @@ h2 {
     text-align: center;
     display: none;
     padding: 20px 0;
-      z-index: 1000;
+    z-index: 1000;
   }
 
   .options.active {
@@ -216,7 +289,7 @@ h2 {
   }
 
   .navbar {
-      z-index: 900;
+    z-index: 900;
     position: relative;
   }
 }
