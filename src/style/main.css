@@ -248,6 +248,35 @@ section {
   cursor: pointer;
 }
 
+/* ===== SKILLS SECTION ===== */
+
+.skills {
+  color: var(--platinum);
+  border-radius: 20px;
+  margin: 12% 12% 0 12%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 30%;
+  background-color: var(--blue-spruce);
+}
+
+.skills h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.logos h3 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.logos2 {
+  display: flex;
+}
+
+
+
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 768px) {
   .menu-toggle {
