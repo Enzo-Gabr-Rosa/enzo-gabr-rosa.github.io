@@ -469,7 +469,7 @@ section {
 }
 
 .card button {
-  transition: 0.4s;
+  transition: 0.5s;
   font-size: 20px;
   border: none;
   border-radius: 20px;
@@ -482,7 +482,7 @@ section {
 }
 
 .card button:hover{
-  transition:  0.4s;
+  transition:  0.5s;
   color: var(--alabaster-grey);
   background-color: var(--turquoise);
 }
