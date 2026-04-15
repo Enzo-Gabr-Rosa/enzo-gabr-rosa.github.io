@@ -428,6 +428,65 @@ section {
   opacity: 0;
 }
 
+/* ===== PROJECTS SECTION ===== */
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  margin: 10% 0 0 0;
+}
+
+.cardDisplay {
+  background-color: var(--alabaster-grey);
+  width: 336px;
+  height: 192px;
+  border-radius: 50px;
+  margin: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects .card {
+  border-radius: 40px;
+  background-color: var(--black-ink);
+  width: 420px;
+  height: 657px;
+}
+
+.card h3 {
+  padding: 0 0px 0 10%;
+  color: var(--platinum);
+  font-size: 32px;
+}
+
+.card p {
+  font-size: 20px;
+  padding: 0 10% 0 10%;
+  text-align: justify;
+  color: var(--alabaster-grey);
+}
+
+.card button {
+  transition: 0.4s;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  color: var(--platinum);
+  width: 181px;
+  height: 47px;
+  background-color: var(--blue-spruce);
+  margin: 5% 30% 0 30%;
+  cursor: pointer;
+}
+
+.card button:hover{
+  transition:  0.4s;
+  color: var(--alabaster-grey);
+  background-color: var(--turquoise);
+}
+
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -540,9 +599,9 @@ section {
     align-items: center;
     text-align: center;
   }
-.contact {
-  height: 600px;
-}
+  .contact {
+    height: 600px;
+  }
   .contact h2 {
     padding: 72px 0 16px 0;
     text-align: center;
