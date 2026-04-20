@@ -23,6 +23,7 @@
 
 body {
   background-color: var(--alabaster-grey);
+  overflow-x: hidden;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -98,8 +99,9 @@ h3 {
 
 /* ===== INTRODUCTION ===== */
 .introduction {
+  margin: 5% 0 5% 0;
   color: var(--black-ink);
-  margin: 8% 0 12% 0;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,30 +119,31 @@ h3 {
 }
 
 .introduction img {
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   object-fit: cover;
-  border-top: 8px solid var(--blue-spruce);
-  border-bottom: 8px solid var(--blue-spruce);
-  border-left: 8px solid var(--turquoise);
-  border-right: 8px solid var(--turquoise);
+  border-top: 12px solid var(--blue-spruce);
+  border-bottom: 12px solid var(--blue-spruce);
+  border-left: 12px solid var(--turquoise);
+  border-right: 12px solid var(--turquoise);
   transition: 1s;
   transform: scale(1);
 }
 
 .introduction img:hover {
-  border-top: 8px solid var(--turquoise);
-  border-bottom: 8px solid var(--turquoise);
-  border-left: 8px solid var(--blue-spruce);
-  border-right: 8px solid var(--blue-spruce);
+  border-top: 20px solid var(--turquoise);
+  border-bottom: 20px solid var(--turquoise);
+  border-left: 20px solid var(--blue-spruce);
+  border-right: 20px solid var(--blue-spruce);
   transform: scale(1.25);
   box-shadow: 0 0 100px var(--turquoise);
 }
 
 .list {
   margin-top: 20px;
-  margin-left: 10%;
+  margin-left: 0;
+  padding: 0 20px;
   font-size: 24px;
 }
 
@@ -159,8 +162,9 @@ h3 {
   padding: 0 8%;
   color: var(--platinum);
   display: flex;
-  gap: 250px;
-  height: 567px;
+  gap: 40px;
+  min-height: 567px;
+  padding: 60px 8%;
   position: relative;
   overflow: hidden;
 }
@@ -172,19 +176,20 @@ h3 {
 }
 
 .details p {
-  font-size: 24px;
+  font-size: 30px;
   text-align: justify;
-  padding: 20px 10% 0 0;
+  padding: 20px 8% 0 0;
 }
 
 /* ===== SKILLS SECTION ===== */
 .skills {
   color: var(--platinum);
   border-radius: 54px;
-  margin: 12% 12% 12% 12%;
+  margin: 8% auto;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
+  max-width: 1000px;
   height: 30%;
   background-color: var(--blue-spruce);
   padding: 24px;
@@ -255,7 +260,7 @@ h3 {
 section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -356,13 +361,14 @@ section {
 
 .contact {
   width: 100%;
-  height: 750px;
+  min-height: 750px;
+  padding: 60px 20px;
   background-color: var(--black-ink);
   color: var(--platinum);
 }
 
 .contact h2 {
-  padding: 4% 4% 2% 0;
+  padding: 2% 4% 2% 0;
   font-size: 48px;
   text-align: end;
 }
@@ -403,11 +409,12 @@ section {
 
 .contactImages {
   display: flex;
+  justify-content: left;
 }
 
 .contactImages img {
-  width: 350px;
-  height: 350px;
+  max-width: 100%;
+  height: auto;
 }
 .img-container img {
   position: absolute;
@@ -434,25 +441,28 @@ section {
   display: flex;
   justify-content: center;
   gap: 4%;
-  margin: 10% 0 0 0;
-}
-
-.cardDisplay {
-  background-color: var(--alabaster-grey);
-  width: 336px;
-  height: 192px;
-  border-radius: 50px;
-  margin: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 80px 20px;
+  flex-wrap: wrap;
 }
 
 .projects .card {
   border-radius: 40px;
   background-color: var(--black-ink);
-  width: 420px;
-  height: 657px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.cardDisplay {
+  background-color: var(--alabaster-grey);
+  width: 80%;
+  max-width: 336px;
+  height: 192px;
+  border-radius: 50px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card h3 {
@@ -477,12 +487,12 @@ section {
   width: 181px;
   height: 47px;
   background-color: var(--blue-spruce);
-  margin: 5% 30% 0 30%;
+  margin: 5% 30% 5% 30%;
   cursor: pointer;
 }
 
-.card button:hover{
-  transition:  0.5s;
+.card button:hover {
+  transition: 0.5s;
   color: var(--alabaster-grey);
   background-color: var(--turquoise);
 }
@@ -494,6 +504,7 @@ section {
   }
 
   .navbar {
+    padding: 20px;
     z-index: 900;
     position: relative;
   }
@@ -526,13 +537,14 @@ section {
 
   .options.active {
     display: flex;
-    margin-bottom: auto;
   }
 
+  /* ===== INTRO ===== */
   .introduction {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    padding: 40px 16px; /* reduz lateral pra evitar overflow */
   }
 
   .introduction h2 {
@@ -544,76 +556,126 @@ section {
   }
 
   .introduction li {
-    padding: 0 20px;
+    padding: 0 10px;
     text-align: justify;
     font-size: 20px;
   }
 
   .introduction img {
-    margin-top: 50px;
-    width: 250px;
-    height: 250px;
+    margin-top: 40px;
+    width: 220px;
+    height: 220px;
     transform: scale(1.05);
   }
 
+  .introduction img:hover {
+    transform: scale(1.05); /* remove zoom exagerado no mobile */
+  }
+
+  /* ===== DETAILS ===== */
   .details {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     gap: 20px;
+    padding: 40px 16px; /* evita estouro lateral */
   }
 
   .details h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .details p {
     font-size: 16px;
+    padding: 0;
   }
 
+  /* ===== SKILLS ===== */
   .logos {
-    display: flex;
     flex-direction: row;
-    gap: 20px;
-    padding: 0 0 40px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
   }
 
   .skills {
-    height: auto; /* Permite que o container cresça com o conteúdo */
-    margin: 10% 15%; /* Reduz as margens laterais no celular */
-    width: 70%;
+    margin: 40px 16px;
+    width: auto;
+    height: auto;
+  }
+  .skillCard {
+    display: flex;
+    flex-direction: column; /* Empilha ícone, h3 e h4 */
+    align-items: center; /* Centraliza tudo dentro do card */
+    text-align: center; /* Garante centralização do texto */
   }
 
   .logos2 {
     display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    align-items: center; /* Centraliza os itens */
-    gap: 40px; /* Espaçamento entre cada habilidade */
-    padding: 20px 0;
+    flex-direction: column;
+    align-items: center; /* Centraliza os cards horizontalmente */
+    justify-content: center;
+    gap: 32px; /* Espaço maior entre os blocos (HTML, CSS, etc) */
+    width: 100%;
+    max-width: 400px; /* Evita que o container fique largo demais */
   }
 
-  .skillCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.backgroundImg {
+  width: 120px;           /* Tamanho fixo controlado */
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;     /* Espaço entre imagem e o título */
+}
+
+  /* ===== CONTACT ===== */
   .contact {
-    height: 600px;
+    height: auto;
+    padding: 40px 16px;
   }
+
   .contact h2 {
-    padding: 72px 0 16px 0;
+    padding: 40px 0 16px 0;
     text-align: center;
     font-size: 30px;
   }
 
+  .contact-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .contact-text h3 {
     font-size: 24px;
-    margin-top: 10px;
   }
 
   .contactImages {
     display: none;
+  }
+
+  .img-container {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects {
+    padding: 40px 16px;
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .cardDisplay {
+    width: 90%;
+    height: auto;
+  }
+
+  .card button {
+    margin: 20px auto;
+    display: block;
   }
 }
