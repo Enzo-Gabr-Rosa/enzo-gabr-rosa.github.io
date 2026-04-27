@@ -175,6 +175,15 @@ h3 {
   margin-top: 50px;
 }
 
+.details a {
+  color: var(--blue-spruce);
+  transition: 0.5s;
+}
+
+.details a:hover {
+  color: var(--turquoise);
+}
+
 .details p {
   font-size: 30px;
   text-align: justify;
@@ -361,7 +370,7 @@ section {
 
 .contact {
   width: 100%;
-  min-height: 750px;
+  min-height: 500px;
   padding: 60px 20px;
   background-color: var(--black-ink);
   color: var(--platinum);
@@ -646,7 +655,12 @@ section {
   }
 
   .contact-text h3 {
+    font-size: 28px;
+  }
+
+  .contact-text li {
     font-size: 24px;
+    color: var(--turquoise)
   }
 
   .contactImages {
